@@ -18,6 +18,7 @@
             android:layout_height="194dp"
             android:scaleType="centerCrop"
             tools:srcCompat="@tools:sample/avatars"
+            android:src="@color/black"
             android:contentDescription="@string/news_image_description"
             />
 
@@ -62,10 +63,11 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn1"
                 android:layout_width="276dp"
+                style="?attr/borderlessButtonStyle"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 android:layout_weight="3"
-                tools:text="@string/news_btn" />
+                android:text="@string/news_btn" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn2"
@@ -82,7 +84,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:iconTint="#B00020"
                 app:icon="@drawable/ic_favorite" />
         </LinearLayout>
 
