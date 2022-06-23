@@ -6,4 +6,6 @@
     <string name="title">Title</string>
     <string name="supporting_text">support text</string>
     <string name="news_btn">Open link</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
