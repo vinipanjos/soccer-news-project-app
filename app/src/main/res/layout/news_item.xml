@@ -62,7 +62,7 @@
             android:orientation="horizontal">
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn1"
+                android:id="@+id/btn_open_link"
                 android:layout_width="276dp"
                 style="?attr/borderlessButtonStyle"
                 android:layout_height="wrap_content"
