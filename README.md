@@ -10,4 +10,4 @@ Projeto de App Android usando Java e Kotlin, explorando o Android Jetpack que ap
   - [Visão geral do ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel)
   - [Retrofit](https://github.com/square/retrofit)
   - [Picasso](https://github.com/square/picasso)
-  - [Usando Intent para abrir link(browser) dentro do adapter do RecyclerView](https://stackoverflow.com/questions/55999815/how-to-make-intent-to-browser-inside-the-adapter-of-recyclyrview)
+  - [Usando Intent para abrir link(browser) dentro do adapter do RecyclerView - Kotlin](https://stackoverflow.com/questions/55999815/how-to-make-intent-to-browser-inside-the-adapter-of-recyclyrview)
