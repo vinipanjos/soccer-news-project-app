@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.soccernews.databinding.NewsItemBinding
 import com.example.soccernews.domain.News
+import com.squareup.picasso.Picasso
 
 open class NewsAdapter(private val dataSet: List<News>) :
     RecyclerView.Adapter<NewsAdapter.ViewHolder>() {
@@ -15,10 +16,11 @@ open class NewsAdapter(private val dataSet: List<News>) :
      */
     inner class ViewHolder(private val binding: NewsItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
-
         fun bind(item: News) {
             binding.titleText.text = item.title
             binding.descriptionText.text = item.description
+
+            Picasso.get().load(item.image).into(binding.ivThumbnail);
         }
 
     }
