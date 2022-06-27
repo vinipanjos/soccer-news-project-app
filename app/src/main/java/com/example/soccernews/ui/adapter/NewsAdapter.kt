@@ -4,13 +4,14 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.soccernews.databinding.NewsItemBinding
 import com.example.soccernews.domain.News
 import com.squareup.picasso.Picasso
 
-open class NewsAdapter(private val dataSet: List<News>, private val mContext: Context) :
+open class NewsAdapter(private val dataSet: List<News>, private val mContext: Context, private val favoriteListener : View.OnClickListener) :
     RecyclerView.Adapter<NewsAdapter.ViewHolder>() {
 
     /**
@@ -29,7 +30,7 @@ open class NewsAdapter(private val dataSet: List<News>, private val mContext: Co
             binding.titleText.text = item.title
             binding.descriptionText.text = item.description
 
-            adapterNews = NewsAdapter(dataSet, mContext)
+            adapterNews = NewsAdapter(dataSet, mContext, favoriteListener)
 
             Picasso.get().load(item.image).into(binding.ivThumbnail);
 
@@ -47,6 +48,8 @@ open class NewsAdapter(private val dataSet: List<News>, private val mContext: Co
                 intent.putExtra(Intent.EXTRA_TEXT, ("O link da noticia é " + item.link))
                 mContext.startActivity(Intent.createChooser(intent,"Share via"))
             }
+            //Favoritar noticia(o evento será instanciado pelo fragment):
+            binding.btnFavorite.setOnClickListener(favoriteListener)
         }
 
     }
