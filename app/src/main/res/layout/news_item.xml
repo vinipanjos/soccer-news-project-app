@@ -71,7 +71,7 @@
                 android:text="@string/news_btn" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn2"
+                android:id="@+id/btn_share"
                 style="?attr/borderlessButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -80,11 +80,12 @@
                 />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn3"
+                android:id="@+id/btn_favorite"
                 style="?attr/borderlessButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                app:iconTint="@color/secondary_200"
                 app:icon="@drawable/ic_favorite" />
         </LinearLayout>
 

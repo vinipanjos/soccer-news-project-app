@@ -36,8 +36,16 @@ open class NewsAdapter(private val dataSet: List<News>, private val mContext: Co
             binding.btnOpenLink.setOnClickListener {
                 val intent = Intent(Intent.ACTION_VIEW)
                 intent.data = Uri.parse(item.link)
-// Peguei esse context colocando um construtor de Context no Adapter e instanciando ela no fragment usando requireContext
+                //Abrir link: (Peguei esse context colocando um construtor de Context no Adapter e instanciando ela no fragment usando requireContext)
                 mContext.startActivity(intent)
+            }
+            //Compartilhar string (link):
+            binding.btnShare.setOnClickListener {
+                val intent = Intent(Intent.ACTION_SEND)
+                intent.type = "text/plain"
+                intent.putExtra(Intent.EXTRA_SUBJECT, item.title)
+                intent.putExtra(Intent.EXTRA_TEXT, ("O link da noticia é " + item.link))
+                mContext.startActivity(Intent.createChooser(intent,"Share via"))
             }
         }
 
