@@ -12,3 +12,5 @@ Projeto de App Android usando Java e Kotlin, explorando o Android Jetpack que ap
   - [Picasso](https://github.com/square/picasso)
   - [Usando Intent para abrir link(browser) dentro do adapter do RecyclerView - Kotlin](https://stackoverflow.com/questions/55999815/how-to-make-intent-to-browser-inside-the-adapter-of-recyclyrview)
   - [Salvar dados em um banco de dados local usando o Room ](https://developer.android.com/training/data-storage/room)
+  - [Singleton (StackOverFlow)](https://stackoverflow.com/questions/21604243/correct-implementation-of-initialization-on-demand-holder-idiom)
+  - [Global Context](https://stackoverflow.com/questions/14057273/android-singleton-with-global-context/14057777#14057777)
