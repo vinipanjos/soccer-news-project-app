@@ -7,11 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.soccernews.R
 import com.example.soccernews.databinding.NewsItemBinding
 import com.example.soccernews.domain.News
 import com.squareup.picasso.Picasso
 
-open class NewsAdapter(private val dataSet: List<News>, private val mContext: Context, private val favoriteListener : View.OnClickListener) :
+open class NewsAdapter(private val dataSet: List<News>, private val mContext: Context, private val favoriteListener : FavoriteListener) :
     RecyclerView.Adapter<NewsAdapter.ViewHolder>() {
 
     /**
@@ -49,7 +50,17 @@ open class NewsAdapter(private val dataSet: List<News>, private val mContext: Co
                 mContext.startActivity(Intent.createChooser(intent,"Share via"))
             }
             //Favoritar noticia(o evento será instanciado pelo fragment):
-            binding.btnFavorite.setOnClickListener(favoriteListener)
+            binding.btnFavorite.setOnClickListener {
+                item.favorite = !item.favorite
+                favoriteListener.onFavorite(item)
+                notifyItemChanged(position)
+            }
+            //alterar a cor do botão de favoritar
+            if (item.favorite == true){
+                binding.btnFavorite.setIconTintResource(R.color.secondary_700)
+            } else {
+                binding.btnFavorite.setIconTintResource(R.color.secondary_200)
+            }
         }
 
     }
@@ -71,4 +82,8 @@ open class NewsAdapter(private val dataSet: List<News>, private val mContext: Co
     // Return the size of your dataset (invoked by the layout manager)
     override fun getItemCount() = dataSet.size
 
+}
+
+interface FavoriteListener {
+    fun onFavorite(news: News)
 }
