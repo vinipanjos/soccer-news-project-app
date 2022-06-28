@@ -11,3 +11,4 @@ Projeto de App Android usando Java e Kotlin, explorando o Android Jetpack que ap
   - [Retrofit](https://github.com/square/retrofit)
   - [Picasso](https://github.com/square/picasso)
   - [Usando Intent para abrir link(browser) dentro do adapter do RecyclerView - Kotlin](https://stackoverflow.com/questions/55999815/how-to-make-intent-to-browser-inside-the-adapter-of-recyclyrview)
+  - [Salvar dados em um banco de dados local usando o Room ](https://developer.android.com/training/data-storage/room)
