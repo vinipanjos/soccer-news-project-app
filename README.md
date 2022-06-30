@@ -2,7 +2,7 @@
 Projeto de App Android usando Java e Kotlin, explorando o Android Jetpack que apresenta notícias sobre futebol, consumidas a partir de uma API REST criada para este projeto. 
 
 ##
-<img src="https://cdn.discordapp.com/attachments/984476455461351424/992156224177061908/unknown.png" alt="jokenpo" width="250"/>               .            <img src="https://cdn.discordapp.com/attachments/984476455461351424/992156420772466849/unknown.png" alt="jokenpo" width="250"/>
+<img src="https://cdn.discordapp.com/attachments/984476455461351424/992156224177061908/unknown.png" alt="news screen" width="250"/>               .            <img src="https://cdn.discordapp.com/attachments/984476455461351424/992156420772466849/unknown.png" alt="favorite screen" width="250"/>               .            <img src="https://cdn.discordapp.com/attachments/984476455461351424/992167680574509128/unknown.png" alt="error screen" width="250"/>
 
 
 1. Fontes de informação
@@ -18,3 +18,4 @@ Projeto de App Android usando Java e Kotlin, explorando o Android Jetpack que ap
   - [Salvar dados em um banco de dados local usando o Room ](https://developer.android.com/training/data-storage/room)
   - [Singleton (StackOverFlow)](https://stackoverflow.com/questions/21604243/correct-implementation-of-initialization-on-demand-holder-idiom)
   - [Global Context](https://stackoverflow.com/questions/14057273/android-singleton-with-global-context/14057777#14057777)
+  - [Adicionar SwipeRefreshLayout](https://developer.android.com/training/swipe/add-swipe-interface)
