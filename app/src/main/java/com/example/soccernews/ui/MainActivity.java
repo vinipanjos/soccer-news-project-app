@@ -1,4 +1,4 @@
-package com.example.soccernews;
+package com.example.soccernews.ui;
 
 import android.os.Bundle;
 
@@ -9,6 +9,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.room.Room;
 
+import com.example.soccernews.R;
 import com.example.soccernews.data.local.AppDatabase;
 import com.example.soccernews.databinding.ActivityMainBinding;
 

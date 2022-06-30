@@ -1,6 +1,5 @@
 package com.example.soccernews.ui.news;
 
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,15 +7,14 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.room.Room;
 
-import com.example.soccernews.MainActivity;
+import com.example.soccernews.ui.MainActivity;
 import com.example.soccernews.data.local.AppDatabase;
 import com.example.soccernews.databinding.FragmentNewsBinding;
 import com.example.soccernews.ui.adapter.NewsAdapter;
+import com.google.android.material.snackbar.Snackbar;
 
 public class NewsFragment extends Fragment {
 
@@ -41,13 +39,14 @@ public class NewsFragment extends Fragment {
         newsViewModel.getState().observe(getViewLifecycleOwner(), state -> {
             switch (state) {
                 case DOING:
-                    //TODO iniciar SwipeRefreshLayout (carregando)
+                    binding.srlNews.setRefreshing(true);
                     break;
                 case DONE:
-                    //TODO finalizar SwipeRefreshLayout
+                    binding.srlNews.setRefreshing(false);
                     break;
                 case ERROR:
-                    //TODO finalizar SwipeRefreshLayout e mostrar um  genérico
+                    binding.srlNews.setRefreshing(false);
+                    Snackbar.make(binding.srlNews, "Erro de conexão", Snackbar.LENGTH_SHORT).show();
                     break;
             }
         });

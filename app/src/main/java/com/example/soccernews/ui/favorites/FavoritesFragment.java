@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.example.soccernews.MainActivity;
+import com.example.soccernews.ui.MainActivity;
 import com.example.soccernews.databinding.FragmentFavoritesBinding;
 import com.example.soccernews.domain.News;
 import com.example.soccernews.ui.adapter.NewsAdapter;
